@@ -86,15 +86,15 @@
                     <li class="divider"></li>
                     <li>
                         <!-- Modal div is at the bottom of the page before including javascript code -->
-                        <a href="#modal-user-password" role="button" data-toggle="modal"><i class="fa fa-cogs"></i> Change Password</a>
+                        <a href="#modal-user-password" role="button" data-toggle="modal"><i class="fa fa-cogs"></i> Змінити пароль</a>
                     </li>
                     <li>
                         <!-- Modal div is at the bottom of the page before including javascript code -->
-                        <a href="#modal-user-settings" role="button" data-toggle="modal"><i class="fa fa-user"></i> User Profile</a>
+                        <a href="#modal-user-settings" role="button" data-toggle="modal"><i class="fa fa-user"></i> Змінити дані профіля</a>
                     </li>
                     <li class="divider"></li>
                     <li>
-                        <a href="/logout"><i class="fa fa-lock"></i>Log out</a>
+                        <a href="/logout"><i class="fa fa-lock"></i>Вийти із системи</a>
                     </li>
                 </ul>
             </li>

@@ -53,31 +53,32 @@
                             <a href="{{'/adm/tests/add-question?test_id=' . $data['test']->id}}" class="btn btn-warning"><i class="fa fa-question"></i> Додати питання</a>
                         @endif
                         <button class="btn btn-success"><i class="fa fa-floppy-o"></i> Зберегти</button>
-                        <a href="{{'/adm/tests/view?test_id=' . $data['test']->id}}" class="btn btn-default"><i class="fa fa-forward"></i> Подивитись результати</a>
-
-                    </div>
-                </div>
-            </div>
-        </form>
-            @if(isset($data['test']))
-            <table class="table table-hover">
-                <thead>
-                <tr>
-                    <th class="text-center">#</th>
-                    <th>Назва питання</th>
-                    <th>Видалити</th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach($data['test']->questions as $question)
-                    <tr>
-                        <td class="text-center">{{$question->id}}</td>
-                        <td><a href="{{'/adm/tests/edit-question?id=' . $question->id . '&test_id=' . $data['test']->id}}">{{$question->title}}</a></td>
-                        <td><a href="{{'/adm/tests/delete-question?id=' . $question->id}}" class="btn btn-danger btn-xs"><i class="fa fa-times"></i></a></td>
-                    </tr>
-                @endforeach
-                </tbody>
-            </table>
-                @endif
+                        @if(isset($data['test']))
+                            <a href="{{'/adm/tests/view?test_id=' . $data['test']->id}}" class="btn btn-default"><i class="fa fa-forward"></i> Подивитись результати</a>
+                        @endif
     </div>
+</div>
+</div>
+</form>
+@if(isset($data['test']))
+<table class="table table-hover">
+<thead>
+<tr>
+<th class="text-center">#</th>
+<th>Назва питання</th>
+<th>Видалити</th>
+</tr>
+</thead>
+<tbody>
+@foreach($data['test']->questions as $question)
+<tr>
+    <td class="text-center">{{$question->id}}</td>
+    <td><a href="{{'/adm/tests/edit-question?id=' . $question->id . '&test_id=' . $data['test']->id}}">{{$question->title}}</a></td>
+    <td><a href="{{'/adm/tests/delete-question?id=' . $question->id}}" class="btn btn-danger btn-xs"><i class="fa fa-times"></i></a></td>
+</tr>
+@endforeach
+</tbody>
+</table>
+@endif
+</div>
 @endsection

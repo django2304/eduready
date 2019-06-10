@@ -57,45 +57,7 @@
 
 <!--================ Start Testimonial Area =================-->
 <div class="testimonial_area section_gap">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-5">
-                <div class="main_title">
-                    <h2 class="mb-3">@lang('lang.main.feedbacks')</h2>
-                    <p>
-                        @lang('lang.main.subFeedbacks')
-                    </p>
-                </div>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="testi_slider owl-carousel">
-                @foreach($feedbacks as $feedback)
-                    <div class="testi_item">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-6">
-                                @if($feedback->user->img != 'user.jpg')
-                                    <img src="{{ asset('img/users/' . $feedback->user->id . '/' . $feedback->user->img)}}" alt="{{$feedback->user->img}}" />
-                                @else
-                                    <img src="{{ asset('img/users/' . $feedback->user->img)}}" alt="{{$feedback->user->img}}" />
-                                @endif
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="testi_text">
-                                    <h4>{{$feedback->title}}</h4>
-                                    <p><strong>Course: </strong>{{$feedback->course->title}}</p>
-                                    <p>
-                                        {{$feedback->text}}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
 </div>
 
 <!--================ End Testimonial Area =================-->
